@@ -34,7 +34,7 @@ Borrow = A’B
 Figure -02 HALF Subtractor
 
 **Truthtable**
-
+![399066333-b0e13ed2-1f1b-4b46-82ee-ecdd5f99bcaf](https://github.com/user-attachments/assets/f32c53bb-c674-4f62-8d10-6821280c09b2)
 **Procedure**
 
 1.	Type the program in Quartus software.
@@ -50,12 +50,35 @@ Figure -02 HALF Subtractor
 
 **Program:**
 
-/* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+/Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+i)HALF ADDER
+module ha(a,b,sum,carry);
+input a,b;
+output sum,carry;
+assign sum= (a ^ b);
+assign carry
 
-Developed by: RegisterNumber:*/
+i)HALF SUBTRACTOR
+module hs(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference= (a ^ b);
+assign borrow= ( ~a & b);
+endmodule
+
+## Developed by: Manoj Kumar G
+## RegisterNumber: 212222230078
 
 **RTL Schematic**
+**Half Adder**:
+![399079551-919fa1d7-ce17-4e04-b9d5-5d1221a1f06f](https://github.com/user-attachments/assets/65954346-44c5-4ec4-a97f-5c2e72f3222d)
+**Half Subtractor**:
+![399079576-1deb8ffb-6f40-4fa8-be6e-6eaf1939297c](https://github.com/user-attachments/assets/c49323f0-8af4-4159-9aa2-cef486d0c309)
 
 **Output/TIMING Waveform**
-
+**Half Adder**:
+![399079600-e8554643-3e02-43ae-88df-767aacced0f4](https://github.com/user-attachments/assets/2e43ba95-55c2-43f7-80c9-8525265fe64c)
+**Half Subtract**:
+![399079623-0df76d69-7083-4447-a3ce-ee30e6a4dac6](https://github.com/user-attachments/assets/0db6b858-b105-4042-9bf3-32d713b71cb7)
 **Result:**
+Thus the OUTPUT's of Encoder and Decoder are verified by synthesizing and simulating the VERILOG code.
